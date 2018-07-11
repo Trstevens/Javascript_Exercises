@@ -4,15 +4,30 @@
 
 //Function prompts user what their age is
 function checkDriverAge(){
-	prompt("What is your age?");
+	var age = prompt("What is your age?");
+	if (Number(age) < 18) {
+	alert("Sorry, you are too young to drive this car. Powering off");
+} else if (Number(age) > 18) {
+	alert("Powering On. Enjoy the ride!");
+} else if (Number(age) === 18) {
+	alert("Congratulations on your first year of driving. Enjoy the ride!");
+}
 }
 
 checkDriverAge();
 
 //FUNCTION EXPRESSION//
-var a = function checkDriverAge2(){
-	prompt("What is your age?");
+var checkDriverAge2 = function(){
+	var age = prompt("What is your age?");
+	if (Number(age) < 18) {
+	alert("Sorry, you are too young to drive this car. Powering off");
+} else if (Number(age) > 18) {
+	alert("Powering On. Enjoy the ride!");
+} else if (Number(age) === 18) {
+	alert("Congratulations on your first year of driving. Enjoy the ride!");
 }
+}
+
 
 checkDriverAge2();
 
